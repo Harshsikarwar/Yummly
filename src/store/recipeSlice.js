@@ -1,25 +1,20 @@
 import {createSlice} from "@reduxjs/toolkit"
-import React from "react"
-import apiCall from "../conf/Apicall"
+import React, { useEffect } from "react"
+
 
 const initialState = {
-    data : "",
-    url : "https://"+"c9c1eaad2e1842808610ed26299d6eda"+".spoonacular.com/recipes/",
+    title : localStorage.getItem("title")
 }
 
 const recipeSlice = createSlice({
     name : "recipe",
     initialState,
     reducers : {
-        getNonveg : (state, actions) => {
-            state.data = apiCall("ingredients=chicken")
-            console.log("data : ",state.data)
+        pushRecipe : (state, actions) => {
+            localStorage.setItem("title",actions.payload)
+            state.title=localStorage.getItem("title")
         },
-        getVeg : (state, actions) => {
-            state.data = apiCall("ingredients=tomato,potato,onion,spinach,cheese,peas")
-            console.log("data : ",state.data)
-        }
     }
 })
-export const {getNonveg, getVeg} = recipeSlice.actions
+export const {pushRecipe} = recipeSlice.actions
 export default recipeSlice.reducer

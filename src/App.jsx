@@ -1,14 +1,17 @@
 import { useState } from 'react'
 import './App.css'
 import {useDispatch} from "react-redux"
-import { getNonveg, getVeg } from './store/recipeSlice'
+import {Header, Footer} from './Components/index'
+import {Outlet} from "react-router-dom"
 
 function App() {
   const dispatch = useDispatch()
-  const search = dispatch(getVeg())
+  //const search = dispatch(getVeg())
   return (
     <>
-      <div>Running...</div>
+      <Header/>
+      <Outlet/>
+      <Footer/>
     </>
   )
 }
