@@ -11,18 +11,30 @@ export default function RecipeBox({
         <div className="RecipeBox">
             <img className="recipeImage" src={image}></img>
             <div className="recipeSubBox">
-                <h3 className="recipeMainTitle">{title}</h3>
+                <div className="titleImg">
+                    <img className="recipeTitleImg" src="https://cdn-icons-png.flaticon.com/128/17588/17588752.png"></img>
+                    <h3 className="recipeMainTitle">{title}</h3>
+                </div>
             </div>
             <div className="recipeSubBox">
-                <h3 className="recipeTitle">Ingredients</h3>
+                <div className="titleImg">
+                    <img className="recipeTitleImg" src="https://cdn-icons-png.flaticon.com/128/14899/14899824.png"></img>
+                    <h3 className="recipeTitle">Ingredients</h3>
+                </div>
                 <p className="recipeDiscript">{ingredients}</p>
             </div>
             <div className="recipeSubBox">
-                <h3 className="recipeTitle">Prepare Time</h3>
+                <div className="titleImg">
+                    <img className="recipeTitleImg" src="https://cdn-icons-png.flaticon.com/128/15354/15354817.png"></img>
+                    <h3 className="recipeTitle">Prepare Time</h3>
+                </div>
                 <p className="recipeDiscript">{prepareTime} min</p>
             </div>
             <div className="recipeSubBox">
-                <h3 className="recipeTitle">Instructions</h3>
+                <div className="titleImg">
+                    <img className="recipeTitleImg" src="https://cdn-icons-png.flaticon.com/128/15399/15399160.png"></img>
+                    <h3 className="recipeTitle">Instructions</h3>
+                </div>
                 <p className="recipeDiscript">{Instructions}</p>
             </div>
         </div>

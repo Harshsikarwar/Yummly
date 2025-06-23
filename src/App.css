@@ -325,21 +325,28 @@ footer{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 800;
     margin: 10px;
-    background-color: blueviolet;
-    border-width: 5px;
-    border-style: solid;
-    border-color: blueviolet;
-    border-radius: 10px;
-    color: white;
-    line-height: 60px;
+    color: black;
+    margin-top: 0px;
+}
+
+.titleImg{
+    display: flex;
+    flex-direction: row;
+}
+
+.recipeTitleImg{
+    height: 30px;
+    width:30px;
+    margin: 10px;
 }
 
 .recipeTitle{
     font-size: 24px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 800;
-    margin-left: 20px;
+    margin-left: 5px;
     margin-bottom: 0px;
+    margin-top: 10px;
 }
 
 .recipeDiscript{
@@ -453,6 +460,10 @@ footer{
 
     .featuredImg{
         height: 200px;
+    }
+
+    .recipeImage{
+        height: 300px;
     }
 }
 
@@ -569,6 +580,18 @@ footer{
         border-radius: 15px;
         margin-top: 10px;
     }
+
+    #headerId{
+        top:68px;
+    }
+
+    .recipeImage{
+        height: 250px;
+    }
+
+    .recipeMainTitle{
+        font-size: 28px;
+    }
 }
 
 @media(max-width:343px){
@@ -578,6 +601,10 @@ footer{
     .previewTitle{
         font-size: 18px;
         margin-top: 5px;
+        font-weight: bolder;
+    }
+    .previewDiscrpt{
+        font-weight: lighter;
     }
     .previewBox{
         width: 200px;
@@ -591,9 +618,36 @@ footer{
     #navItemListHeader{
         justify-content: right;
     }
+
+    #headerId{
+        top:60px;
+        width: 200px;
+    }
+
+    .navSliderItemName{
+        font-size: 16px;
+    }
+
+    .recipeMainTitle{
+        font-size: 24px;
+    }
+
+    .recipeTitle{
+        font-size: 20px;
+    }
 }
 
 @media(max-width:324px){
+    .recipeMainTitle{
+        font-size: 20px;
+    }
+
+    .recipeTitle{
+        font-size: 18px;
+    }
+    .recipeDiscript{
+        font-size: 16px;
+    }
     .sliderImg{
         height: 200px;
     }
