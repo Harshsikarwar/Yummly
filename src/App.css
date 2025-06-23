@@ -414,7 +414,7 @@ footer{
     from{
         right:-1000px;
     }
-    top{
+    to{
         right:0px;
     }
 }
@@ -453,6 +453,46 @@ footer{
 
     .featuredImg{
         height: 200px;
+    }
+}
+
+@media(max-width:615px){
+    .sliderCard{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+    }
+
+    .sliderImg{
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 50%;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 50%;
+        width: 100%;
+        height: 300px;
+    }
+
+    .sliderInfo{
+        width: 100%;
+        margin: 0px;
+        margin-left: 5px;
+        margin-right: 5px;
+        align-items: center;
+    }
+
+    .sliderTitle{
+        font-size: 34px;
+    }
+
+    .sliderSlogan{
+        margin-top: 5px;
+    }
+
+    .sliderBtn{
+        margin: 0px;
+        margin-bottom: 10px;
     }
 }
 
@@ -514,6 +554,21 @@ footer{
     .previewBox{
         width: 250px;
     }
+
+    .sliderImg{
+        height: 250px;
+    }
+
+    .sliderCard{
+        width: 300px;
+    }
+
+    .prevButton, .nextButton{
+        height: 40px;
+        width: 40px;
+        border-radius: 15px;
+        margin-top: 10px;
+    }
 }
 
 @media(max-width:343px){
@@ -535,5 +590,32 @@ footer{
     }
     #navItemListHeader{
         justify-content: right;
+    }
+}
+
+@media(max-width:324px){
+    .sliderImg{
+        height: 200px;
+    }
+
+    .sliderCard{
+        width: 250px;
+    }
+
+    .sliderTitle{
+        margin-top: 5px;
+        font-size: 32px;
+    }
+
+    .sliderSlogan{
+        font-size: 16px;
+    }
+
+    .sliderBtn{
+        font-size: 20px;
+    }
+
+    .prevnextBox{
+        width: 100%;
     }
 }
