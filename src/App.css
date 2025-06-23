@@ -2,6 +2,36 @@ body{
     margin: 0px;
     background-color: whitesmoke;
 }
+
+.Refresher{
+    position:absolute;
+    display: flex;
+    top:-10000px;
+    left: 0px;
+    width:100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(245, 139, 41);
+    animation: refresher 15s ease-in;
+}
+
+#refreshLogo{
+    height: 100px;
+}
+
+
+@keyframes refresher{
+    from{
+        top:0px;
+        opacity: 80%;
+    }
+    to{
+        top:-10000px;
+        opacity: 0%;
+    }
+}
+
 header{
     display: flex;
     flex-direction: row;
@@ -72,6 +102,17 @@ header{
     color: black;
     margin: 0px 10px 0px 0px;
     line-height: 30px;
+}
+
+#menuBox{
+    border-radius: 50%;
+    display: none;
+}
+
+#menuBurger{
+    height: 35px;
+    width: 30px;
+    margin: 5px 10px 5px 10px;
 }
 
 /*footer*/
@@ -210,16 +251,6 @@ footer{
     align-items: center;
     text-align: center;
     box-shadow: 0px 0px 8px 0px black;
-    animation: entry 0.5s ease-in-out;
-}
-
-@keyframes entry{
-    from{
-        opacity: 50%;
-    }
-    to{
-        opacity: 100%;
-    }
 }
 
 .featuredImg{
@@ -325,4 +356,184 @@ footer{
     width: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+}
+
+#headerId{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top:85px;
+    right:0px;
+    background-color: rgb(245, 139, 41);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    animation: entryOfSlider .7s ease-in-out;
+}
+
+.navSliderItems{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px;
+}
+
+.navSliderItemList{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.navSliderBox{
+    background-color: rgb(243, 194, 61);
+    margin-right: 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+.navSliderBox:hover{
+    background-color: white;
+    box-shadow: 0px 0px 8px 0px black;
+}
+
+.navSliderItemIcon{
+    height: 20px;
+    width: 20px;
+    margin: 5px 5px 0px 10px;
+}
+
+.navSliderItemName{
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    margin: 0px 10px 0px 0px;
+    line-height: 30px;
+}
+
+@keyframes entryOfSlider{
+    from{
+        right:-1000px;
+    }
+    top{
+        right:0px;
+    }
+}
+
+@media(max-width:805px){
+    .navItemList{
+        flex-direction: column;
+    }
+    #navItemListHeader{
+        flex-direction: row;
+    }
+    #navBox{
+        display: none;
+    }
+    #menuBox{
+        display: block;
+        margin-top: 5px;
+    }
+    .navItemList{
+        justify-content: right;
+    }
+
+    .previewBox{
+        width: 250px;
+    }
+
+    .previewTitle{
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .seeBtn{
+        width: 30px;
+        height: 30px;
+    }
+
+    .featuredImg{
+        height: 200px;
+    }
+}
+
+@media(max-width:559px){
+    #navBox{
+        display: none;
+    }
+    #menuBox{
+        display: block;
+        margin-top: 5px;
+    }
+    .navItemList{
+        justify-content: right;
+    }
+
+    .previewBox{
+        width: 200px;
+    }
+
+    .previewTitle{
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .seeBtn{
+        width: 30px;
+        height: 30px;
+    }
+
+    .featuredImg{
+        height: 150px;
+    }
+}
+
+@media(max-width:455px){
+    .headerLogo{
+        margin-right: 0px;
+        margin-top: 10px;
+    }
+    .navItemList{
+        margin-top: 8px;
+        margin-bottom: 10px;
+    }
+    .title{
+        font-size: 24px;
+    }
+    .logo{
+        height: 35px;
+        width: 35px;
+    }
+    #menuBurger{
+        height: 32px;
+        width: 30px;
+    }
+    .previewTitle{
+        font-size: 18px;
+        margin-top: 5px;
+    }
+    .previewBox{
+        width: 250px;
+    }
+}
+
+@media(max-width:343px){
+    .headerLogo{
+        margin-top: 10px;
+    }
+    .previewTitle{
+        font-size: 18px;
+        margin-top: 5px;
+    }
+    .previewBox{
+        width: 200px;
+    }
+    .navItemList{
+        margin: 0px;
+        margin-left: 0px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    #navItemListHeader{
+        justify-content: right;
+    }
 }

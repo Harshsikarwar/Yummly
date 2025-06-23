@@ -13,7 +13,6 @@ export default function Recipe(){
         }
         loadData()
     },[])
-    console.log(data)
     return(
         <div>
             {

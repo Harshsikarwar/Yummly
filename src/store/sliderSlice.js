@@ -29,7 +29,7 @@ const initialState = {
     current:1,
     currentTitle:"",
     currentSlogan:"",
-    currentImg:""
+    currentImg:"",
 }
 
 const sliderSlice = createSlice({
@@ -46,13 +46,11 @@ const sliderSlice = createSlice({
             if(state.current < 3){
                 state.current+=1
             }
-            console.log(state.current)
         },
         prevData : (state, actions) => {
             if(state.current > 1){
                 state.current-=1
             }
-            console.log(state.current)
         }
     }
 })

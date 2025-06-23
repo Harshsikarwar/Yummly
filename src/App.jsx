@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 import {useDispatch} from "react-redux"
-import {Header, Footer} from './Components/index'
+import {Header, Footer, SliderMenu, Refresher} from './Components/index'
 import {Outlet} from "react-router-dom"
 
 function App() {
@@ -10,6 +10,8 @@ function App() {
   return (
     <>
       <Header/>
+      <SliderMenu/>
+      <Refresher/>
       <Outlet/>
       <Footer/>
     </>
